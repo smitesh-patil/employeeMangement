@@ -14,6 +14,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,6 +26,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 public class Project extends BaseEntity{
 	@Column(unique = true)
 	private String title;
@@ -81,6 +83,7 @@ public class Project extends BaseEntity{
 			return false;
 		return true;
 	}
+	
 	//add helper methods
 	public void addEmp(Employee e)
 	{

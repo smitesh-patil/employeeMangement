@@ -33,6 +33,7 @@ private List<Employee> emps=new ArrayList<Employee>();
 public void addEmployee(Employee e) {
 	emps.add(e);// dept --> emp
 	e.setDept(this);// emp --> dept
+	
 }
 
 public void removeEmployee(Employee e) {

@@ -15,6 +15,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,7 +25,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-
+@AllArgsConstructor
 public class Employee extends BaseEntity {
 	@Column(name = "first_name", length = 20)
 	private String firstName;
@@ -67,6 +68,7 @@ public class Employee extends BaseEntity {
 	{
 		projects.add(p);
 		p.getEmps().add(this);
+		
 	}
 	public void removeProject(Project p)
 	{
